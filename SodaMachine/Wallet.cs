@@ -31,6 +31,23 @@ namespace SodaMachine
             Coins.Add(dime);
             Coins.Add(nickel);
             Coins.Add(penny);
+
+            for (int i = 0; i < 12; i++)
+            {
+                Coins.Add(quarter);
+            }
+            for (int i = 0; i < 16; i++)
+            {
+                Coins.Add(dime);
+            }
+            for (int i = 0; i < 6; i++)
+            {
+                Coins.Add(nickel);
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Coins.Add(penny);
+            }
         }
     }
 }
