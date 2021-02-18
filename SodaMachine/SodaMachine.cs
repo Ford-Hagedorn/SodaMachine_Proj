@@ -125,7 +125,12 @@ namespace SodaMachine
         //If the payment does not meet the cost of the soda: despense payment back to the customer.
         private void CalculateTransaction(List<Coin> payment, Can chosenSoda, Customer customer)
         {
-            
+            List<Can> cola;
+            List<Can> orangeSoda;
+            List<Can> rootBeer;
+            cola = 0.50;
+
+
            
         }
         //Takes in the value of the amount of change needed.
