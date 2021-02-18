@@ -125,6 +125,7 @@ namespace SodaMachine
         //If the payment does not meet the cost of the soda: despense payment back to the customer.
         private void CalculateTransaction(List<Coin> payment, Can chosenSoda, Customer customer)
         {
+            
            
         }
         //Takes in the value of the amount of change needed.
@@ -139,13 +140,30 @@ namespace SodaMachine
         //If it does have one, return true.  Else, false.
         private bool RegisterHasCoin(string name)
         {
-           
+            for (int i = 0; i < _register.Count; i++)
+            {
+                if (_register[i].Name != name)
+                {
+                    return false;
+                }
+               
+            }
+            return true;
         }
         //Reusable method to return a coin from the register.
         //Returns null if no coin can be found of that name.
         private Coin GetCoinFromRegister(string name)
         {
-            
+            for (int i = 0; i < _register.Count; i++)
+            {
+                if (_register[i].Name == name)
+                {
+                    return _register[i];
+                }
+
+
+            }
+            return null;
         }
         //Takes in the total payment amount and the price of can to return the change amount.
         private double DetermineChange(double totalPayment, double canPrice)
