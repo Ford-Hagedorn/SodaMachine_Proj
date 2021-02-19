@@ -10,7 +10,7 @@ namespace SodaMachine
     {
         //Member Variables (Has A)
         public Wallet Wallet;
-        public Backpack Backpack;
+        public Backpack backpack;
 
         //Constructor (Spawner)
         public Customer()
@@ -32,11 +32,11 @@ namespace SodaMachine
         //Returns null if no coin can be found
         public Coin GetCoinFromWallet(string coinName)
         {
-            for (int i = 0; i < Wallet.Count; i++)
+            for (int i = 0; i < Wallet.Coins.Count; i++)
             {
-                if (Wallet[i].Name == coinName)
+                if (Wallet.Coins[i].Name == coinName)
                 {
-                    return Wallet[i];
+                    return Wallet.Coins[i];
                 }
 
 
@@ -46,7 +46,10 @@ namespace SodaMachine
         //Takes in a list of coin objects to add into the customers wallet.
         public void AddCoinsIntoWallet(List<Coin> coinsToAdd)
         {
-            
+            for (int i = 0; i < coinsToAdd.Count; i++)
+            {
+                Wallet.Coins.Add(coinsToAdd[i]);
+            }
         }
         //Takes in a can object to add to the customers backpack.
         public void AddCanToBackpack(Can purchasedCan)

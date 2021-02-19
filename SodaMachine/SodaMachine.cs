@@ -128,7 +128,7 @@ namespace SodaMachine
             List<Can> cola;
             List<Can> orangeSoda;
             List<Can> rootBeer;
-            cola = 0.50;
+            
 
 
            
